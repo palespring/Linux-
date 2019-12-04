@@ -20,6 +20,14 @@
 
     `nvm ls`
     
-4. 使用指定node:
+- 查看当前node版本:
+
+    `node -v`
+    
+- 使用指定node:
 
     `nvm use v10.15.3`
+
+- 配置npm为国内源（taobao）:
+
+    `npm install -g cnpm --registry=https://registry.npm.taobao.org`
