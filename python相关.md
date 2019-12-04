@@ -47,3 +47,15 @@
  8. 设置全局版本python
  
      `pyenv global 3.6.1`
+     
+9. pip 全局换源
+
+    将 ~/.pip/pip.conf (若没有则新建该文件) 中的内容改成如下：
+    
+    ```
+    [global]
+    timeout = 6000
+    index-url = https://pypi.douban.com/simple/
+    [install]
+    trusted-host = pypi.douban.com
+    ```
