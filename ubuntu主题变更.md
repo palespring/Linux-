@@ -28,3 +28,5 @@
 
 按如下配置选择即可
 
+![配置1](https://github.com/palespring/Linux-/blob/master/pictures/gnome%E9%85%8D%E7%BD%AE1.png)
+![配置2](https://github.com/palespring/Linux-/blob/master/pictures/gnome%E9%85%8D%E7%BD%AE2.png)
