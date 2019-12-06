@@ -1,0 +1,96 @@
+{
+  "log": {
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "port": 1080,
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "settings": {
+        "udp": true // 开启 UDP 协议支持
+      }
+    },
+    {
+      "port": 8080,
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy-vmess",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "xxx.xxx.xxx.xxx", // 服务器的 IP
+            "port": xxxx, // 服务器的端口
+            "users": [
+              {
+                // id 就是 UUID，相当于用户密码
+                "id": "xxxx",
+                "alterId": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "direct",
+      "settings": {},
+      "protocol": "freedom"
+    }
+  ],
+  "dns": {
+    "servers": [
+      "8.8.8.8",
+      "8.8.4.4",
+      "localhost"
+    ]
+    // 你的 IP 地址，用于 DNS 解析离你最快的 CDN
+    //"clientIp": "203.208.40.63"
+  },
+  // 配置路由功能，绕过局域网和中国大陆地址
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "type": "field",
+        "domain": [
+          // 默认跳过国内网站，如果想要代理某个国内网站可以添加到下列列表中
+          "cnblogs.com"
+        ],
+        "outboundTag": "proxy-vmess"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:cn",
+          "geoip:private"
+        ]
+      }
+    ]
+  }
+}
