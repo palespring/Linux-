@@ -14,6 +14,11 @@
 
     [config文件](https://github.com/palespring/Linux-/blob/master/v2ray/config.json)
     
+4. 代理配置
+
+![配置1](https://github.com/palespring/Linux-/blob/master/pictures/%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE1.png)
+![配置2](https://github.com/palespring/Linux-/blob/master/pictures/%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE2.png)
+    
 - v2ray 相关命令
 
     `sudo systemctl start v2ray` 启动 V2Ray
