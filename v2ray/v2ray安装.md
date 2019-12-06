@@ -12,7 +12,7 @@
 
 3. 配置config
 
-    
+    [config文件](https://github.com/palespring/Linux-/blob/master/v2ray/config.json)
     
 - v2ray 相关命令
 
