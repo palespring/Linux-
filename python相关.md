@@ -59,3 +59,25 @@
     [install]
     trusted-host = pypi.douban.com
     ```
+## pyenv-virtualenv (虚拟环境)
+  1. 下载
+  
+     `brew install pyenv-virtualenv` 或者 `sudo apt-get install`
+    
+  2. 配置全局
+  
+     `if which pyenv-virtualenv >/dev/null; then eval "$(pyenv virtualenv-init -)";fi`
+    
+  3. 新建虚拟环境
+  
+     `pyenv virtualenv [version] <virtualenv-name>`
+    
+     如 `pyenv virtualenv 3.6.1 spiders-3.6.1`
+    
+  4. 使用虚拟环境
+  
+     `pyenv local <virtualenv-name>` 即可
+    
+  5. 删除虚拟环境
+  
+     `pyenv virtualenv-delete <virtualenv-name>`
