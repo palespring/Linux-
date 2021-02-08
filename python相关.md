@@ -105,6 +105,10 @@
 
     `mkvirtualenv <venvName>`
     
+    或 指定python版本
+    
+    `mkvirtualenv -p D:\Python\3.6.2\python.exe <venvName>`
+    
 5. 查看/启用
 
     `workon <venvName>`
