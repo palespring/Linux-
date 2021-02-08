@@ -1,3 +1,5 @@
+# 虚拟环境
+
 安装Python，目前使用pyenv来进行包版本的管理
 
 ## pyenv
@@ -81,3 +83,28 @@
   5. 删除虚拟环境
   
      `pyenv virtualenv-delete <virtualenv-name>`
+
+## virtualenv windows下的python虚拟环境
+1. 安装
+
+    `pip install virtualenv`
+
+2. 安装virtualenv虚拟环境管理包
+
+    `Windows 环境安装使用 pip install  virtualenvwrapper-win`
+
+3. 修改默认的创建目录
+    
+    编辑系统变量
+    
+    变量名：WORKON_HOME
+    
+    变量值：路径
+    
+4. 新建虚拟环境目录
+
+    `mkvirtualenv <venvName>`
+    
+5. 查看/启用
+
+    `workon <venvName>`
