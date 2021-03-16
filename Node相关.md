@@ -31,3 +31,16 @@
 - 配置npm为国内源（taobao）:
 
     `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+    
+## NPM
+- 换成国内源：
+
+    `npm config set registry https://registry.npm.taobao.org`
+    
+- 查看当前npm地址源：
+
+    `npm config get registry`
+    
+- 还原成初始源：
+
+    `npm config set registry https://registry.npmjs.org/`
