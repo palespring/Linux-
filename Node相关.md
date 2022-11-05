@@ -29,6 +29,7 @@
     `nvm use v10.15.3`
     
 - 修改默认node版本
+    
     `nvm alias default 0.12.7 #设置默认 node 版本为 0.12.7`
 
 - 配置npm为国内源（taobao）:
